@@ -1,0 +1,18 @@
+{
+    "name": "swingtree/laravelutils",
+    "type": "library",
+    "authors": [
+        {
+            "name": "swingtree",
+            "email": "studio@swingtree.be"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Swingtree\\LaravelUtils\\LaravelUtilsServiceProvider"
+            ]
+        }
+    }
+}
