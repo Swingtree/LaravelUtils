@@ -8,6 +8,11 @@
         }
     ],
     "require": {},
+    "autoload": {
+        "psr-4": {
+            "Swingtree\\LaravelUtils\\": "src/"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
