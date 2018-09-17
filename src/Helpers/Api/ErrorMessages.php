@@ -25,8 +25,6 @@ class ErrorMessages {
   const TOKEN_IDENTITY__IDENTITY_OUTDATED     = 'api.message.identity.outdated'; //A new identity has been issued at %1
   const TOKEN_IDENTITY__IDENTITY_VERSATILE    = 'api.message.identity.versatile'; //A versatile identity has been detected
 
-//  // License not part of utils
-//  const LICENSE_IDENTITY__NOT_FOUND           = 'api.message.license.not_found'; //License not found
-//  const LICENSE_IDENTITY__DELETED             = 'api.message.license.deleted'; //License identity deleted
+
 
 }

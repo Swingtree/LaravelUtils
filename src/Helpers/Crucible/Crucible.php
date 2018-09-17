@@ -1,6 +1,6 @@
 <?php
 
-namespace Swingtree\LaravelUtils\Helpers;
+namespace Swingtree\LaravelUtils\Helpers\Crucible;
 
 class Crucible {
 
@@ -22,16 +22,18 @@ class Crucible {
 
   /**
    * Init the crucible helper class
+   *
+   * @param \Swingtree\LaravelUtils\Helpers\Crucible\CrucibleDefinition $def
    */
-  public static function init(){
+  public static function init( CrucibleDefinition $def){
     if( empty( self::$ENCRYPT_ENCRYPTED_KEY ) ){
       // real key is encrypted
-      self::$ENCRYPT_ENCRYPTED_KEY = substr(hash(env('SWTCRUX_HASH_A'), env('SWTCRUX_ENC_K'), true), 0, 32);
+      self::$ENCRYPT_ENCRYPTED_KEY = substr(hash($def->Ha(), $def->Ek(), true), 0, 32);
       // IV must be exact 16 chars (128 bit)
-      self::$IV = env('SWTCRUX_ENC_IV');
+      self::$IV = $def->Ei();
 
       // THe encryption algorithm
-      self::$ENCRYPT_ALGO = env('SWTCRUX_ENC_A');
+      self::$ENCRYPT_ALGO = $def->Ea();
     }
   }
 
@@ -41,7 +43,6 @@ class Crucible {
    * @return string
    */
   public static function encrypt( $string ){
-      self::init();
       return base64_encode(openssl_encrypt($string, self::$ENCRYPT_ALGO, self::$ENCRYPT_ENCRYPTED_KEY, OPENSSL_RAW_DATA, self::$IV));
   }
 
@@ -51,9 +52,7 @@ class Crucible {
    * @return string
    */
   public static function decrypt( $encrypted ){
-    self::init();
     $answer = openssl_decrypt(base64_decode($encrypted), self::$ENCRYPT_ALGO, self::$ENCRYPT_ENCRYPTED_KEY, OPENSSL_RAW_DATA, self::$IV);
-    
     return $answer;
   }
 
