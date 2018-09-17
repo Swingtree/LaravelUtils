@@ -26,7 +26,7 @@ class Crucible {
    * @param \Swingtree\LaravelUtils\Helpers\Crucible\CrucibleDefinition $def
    */
   public static function init( CrucibleDefinition $def){
-    if( empty( self::$ENCRYPT_ENCRYPTED_KEY ) ){
+    if( empty( self::$ENCRYPT_ENCRYPTED_KEY ) && !empty($def)){
       // real key is encrypted
       self::$ENCRYPT_ENCRYPTED_KEY = substr(hash($def->Ha(), $def->Ek(), true), 0, 32);
       // IV must be exact 16 chars (128 bit)
