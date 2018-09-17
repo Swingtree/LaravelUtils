@@ -4,7 +4,7 @@ namespace Swingtree\LaravelUtils\Middleware\Optional;
 
 
 use Closure;
-use Swingtree\LaravelUtils\Helpers\Crucible;
+use Swingtree\LaravelUtils\Helpers\Crucible\Crucible;
 
 class CrucibleMiddleware {
 
