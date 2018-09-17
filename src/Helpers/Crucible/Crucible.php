@@ -27,13 +27,15 @@ class Crucible {
    */
   public static function init( CrucibleDefinition $def){
     if( empty( self::$ENCRYPT_ENCRYPTED_KEY ) && !empty($def)){
-      // real key is encrypted
-      self::$ENCRYPT_ENCRYPTED_KEY = substr(hash($def->Ha(), $def->Ek(), true), 0, 32);
-      // IV must be exact 16 chars (128 bit)
-      self::$IV = $def->Ei();
+      if( !empty($def->Ha())){
+        // real key is encrypted
+        self::$ENCRYPT_ENCRYPTED_KEY = substr(hash($def->Ha(), $def->Ek(), true), 0, 32);
+        // IV must be exact 16 chars (128 bit)
+        self::$IV = $def->Ei();
 
-      // THe encryption algorithm
-      self::$ENCRYPT_ALGO = $def->Ea();
+        // THe encryption algorithm
+        self::$ENCRYPT_ALGO = $def->Ea();
+      }
     }
   }
 
