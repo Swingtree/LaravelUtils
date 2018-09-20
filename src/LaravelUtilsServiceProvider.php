@@ -10,13 +10,13 @@ class LaravelUtilsServiceProvider extends ServiceProvider
   /**
    * Bootstrap services.
    *
-   * @param \Illuminate\Routing\Router $router
+   * @param \Illuminate\Routing\Router $router the bloblo
    *
    * @return void
    */
     public function boot(\Illuminate\Routing\Router $router)
     {
-      $router->aliasMiddleware('swt_ks', 'MiddlewareClass');
+      $this->loadMigrationsFrom(__DIR__.'/database/migrations');
     }
 
     /**
