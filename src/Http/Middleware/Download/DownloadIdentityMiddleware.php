@@ -39,7 +39,7 @@ class DownloadIdentityMiddleware extends AbstractSwingtreeMiddleware {
       return response('',Response::HTTP_UNAUTHORIZED);
     }
 
-    $downloadId = DownloadIdentity::where('id',$request->query->get('dlid'))->first();
+    $downloadId = DownloadIdentity::find($dlid);
     // @TODO: Log this
     if( empty($downloadId) ){
       return response('This download link has been outdated',Response::HTTP_UNAUTHORIZED);
