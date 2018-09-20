@@ -7,7 +7,9 @@
             "email": "studio@swingtree.be"
         }
     ],
-    "require": {},
+    "require": {
+        "webpatser/laravel-uuid": "^3.0"
+    },
     "autoload": {
         "psr-4": {
             "Swingtree\\LaravelUtils\\": "src/"

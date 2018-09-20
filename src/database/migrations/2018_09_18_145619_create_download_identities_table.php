@@ -14,13 +14,14 @@ class CreateDownloadIdentitiesTable extends Migration
     public function up()
     {
         Schema::create('download_identities', function (Blueprint $table) {
-            $table->increments('id');
-            $table->uuid('uuid');
+            $table->uuid('id');
             $table->string('name',32);
             $table->string('type', 16);
             $table->timestamp('exp')->comment = 'Expires at';
             $table->boolean('one_time');
             $table->timestamps();
+
+            $table->primary('id');
         });
     }
 
