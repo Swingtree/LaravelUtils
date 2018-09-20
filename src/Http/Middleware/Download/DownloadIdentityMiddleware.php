@@ -34,7 +34,8 @@ class DownloadIdentityMiddleware extends AbstractSwingtreeMiddleware {
     }
 
     // @TODO: Log this
-    if( !$request->query->has('dlid') ){
+    $dlid = $request->route()->parameter('dlid');
+    if( empty($dlid) ){
       return response('',Response::HTTP_UNAUTHORIZED);
     }
 
