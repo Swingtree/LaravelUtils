@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands\DownloadEntity;
+namespace Swingtree\LaravelUtils\Commands\DownloadIdentity;
 
 use Swingtree\LaravelUtils\Commands\VerboseCommand;
 use Swingtree\LaravelUtils\DownloadIdentity;

@@ -33,15 +33,18 @@ class DownloadIdentityMiddleware extends AbstractSwingtreeMiddleware {
       throw new InternalErrorException('Download identity type not defined');
     }
 
+    // @TODO: Log this
     if( !$request->query->has('dlid') ){
       throw new UnauthorizedException();
     }
 
     $downloadId = DownloadIdentity::where('uuid',$request->query->get('dlid'))->first();
+    // @TODO: Log this
     if( empty($downloadId) ){
       throw new UnauthorizedException('This download link has been outdated');
     }
 
+    // @TODO: Log this
     if( $downloadId->type != $type ){
       throw new UnauthorizedException('This download link has not access to this download type');
     }
