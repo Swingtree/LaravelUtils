@@ -15,7 +15,7 @@ class CreateDownloadIdentitiesTable extends Migration
     {
         Schema::create('download_identities', function (Blueprint $table) {
             $table->uuid('id');
-            $table->string('name',32);
+            $table->string('name',64);
             $table->string('type', 16);
             $table->timestamp('exp')->comment = 'Expires at';
             $table->boolean('one_time');
