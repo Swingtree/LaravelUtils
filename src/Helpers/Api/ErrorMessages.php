@@ -23,6 +23,7 @@ class ErrorMessages {
   // Token identity - Custom
   const TOKEN_IDENTITY__IDENTITY_ANONYMOUS    = 'api.message.identity.anonymous'; //Unknown identity
   const TOKEN_IDENTITY__IDENTITY_OUTDATED     = 'api.message.identity.outdated'; //A new identity has been issued at %1
+  const TOKEN_IDENTITY__FORBIDDEN_DOMAIN      = 'api.message.identity.forbidden_domain'; // Current identity tries to access another domain
   const TOKEN_IDENTITY__IDENTITY_VERSATILE    = 'api.message.identity.versatile'; //A versatile identity has been detected
 
 
