@@ -8,7 +8,8 @@
         }
     ],
     "require": {
-        "webpatser/laravel-uuid": "^3.0"
+        "webpatser/laravel-uuid": "^3.0",
+        "swingtree/phputils": "dev-master"
     },
     "autoload": {
         "psr-4": {

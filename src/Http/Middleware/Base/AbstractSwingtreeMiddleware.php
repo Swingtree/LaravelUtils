@@ -3,7 +3,7 @@
 namespace Swingtree\LaravelUtils\Middleware\Base;
 
 use Closure;
-use Swingtree\LaravelUtils\Helpers\Api\Response\ApiExceptionResponse;
+use Swingtree\PhpUtils\Api\Response\ApiExceptionResponse;
 
 abstract class AbstractSwingtreeMiddleware
 {

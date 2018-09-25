@@ -4,8 +4,37 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c24f0b59f6bfd0630d42b3f90ac652bb",
+    "content-hash": "6990db0d1dd52710d087bd4dc44211fb",
     "packages": [
+        {
+            "name": "swingtree/phputils",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Swingtree/PhpUtils.git",
+                "reference": "72743723464aaf0005bbd42d3741471c399559ba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Swingtree/PhpUtils/zipball/72743723464aaf0005bbd42d3741471c399559ba",
+                "reference": "72743723464aaf0005bbd42d3741471c399559ba",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Swingtree\\PhpUtils\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Swingtree",
+                    "email": "studio@swingtree.be"
+                }
+            ],
+            "time": "2018-09-25T10:22:49+00:00"
+        },
         {
             "name": "webpatser/laravel-uuid",
             "version": "3.0.1",
@@ -64,7 +93,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "swingtree/phputils": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
