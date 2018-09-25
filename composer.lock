@@ -4,11 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6990db0d1dd52710d087bd4dc44211fb",
+    "content-hash": "de8bf4ab8e002c0270a71bd12ef63119",
     "packages": [
         {
             "name": "swingtree/phputils",
-            "version": "dev-master",
+            "version": "1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Swingtree/PhpUtils.git",
@@ -93,9 +93,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "swingtree/phputils": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
