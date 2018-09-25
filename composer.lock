@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Swingtree/PhpUtils.git",
-                "reference": "72743723464aaf0005bbd42d3741471c399559ba"
+                "reference": "bd024e856d6b7b6ecc8fc178fafd02532e590663"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Swingtree/PhpUtils/zipball/72743723464aaf0005bbd42d3741471c399559ba",
-                "reference": "72743723464aaf0005bbd42d3741471c399559ba",
+                "url": "https://api.github.com/repos/Swingtree/PhpUtils/zipball/bd024e856d6b7b6ecc8fc178fafd02532e590663",
+                "reference": "bd024e856d6b7b6ecc8fc178fafd02532e590663",
                 "shasum": ""
             },
             "type": "library",
@@ -33,7 +33,7 @@
                     "email": "studio@swingtree.be"
                 }
             ],
-            "time": "2018-09-25T10:22:49+00:00"
+            "time": "2018-09-25T11:24:27+00:00"
         },
         {
             "name": "webpatser/laravel-uuid",
