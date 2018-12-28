@@ -17,7 +17,7 @@ class CreateDownloadIdentitiesTable extends Migration
             $table->uuid('id');
             $table->string('name',64);
             $table->string('type', 16);
-            $table->timestamp('exp')->comment = 'Expires at';
+            $table->integer('exp', FALSE, TRUE)->comment = 'Expires at';
             $table->boolean('one_time');
             $table->timestamps();
 
